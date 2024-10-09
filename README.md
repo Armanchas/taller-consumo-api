@@ -16,14 +16,12 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Use functionalities
 
+in the root directory run
 ```sh
 npm run dev
 ```
+Click on the url printed out on the terminal to open the webpage on your browser
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Open your browser's devtools and go to the console section, click on the buttons and see the returned json objects
