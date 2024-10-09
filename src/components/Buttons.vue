@@ -1,6 +1,7 @@
 <script setup>
 import { fetchPopulationData } from "@/services/countryData.js";
 import { fetchAnimeRec } from "@/services/animeRec.js";
+import { fetchRandomAnime } from "@/services/randomAnime.js";
 
 const handleCountryClick = async () => {
   try {
@@ -19,6 +20,15 @@ const handleAnimeRecClick = async () => {
     console.error("Error:", error);
   }
 };
+
+const handleRandomAnimeClick = async () => {
+  try {
+    const data = await fetchRandomAnime();
+    console.log(data);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
 </script>
 
 <template>
@@ -28,6 +38,9 @@ const handleAnimeRecClick = async () => {
     </button>
     <button class="bg-green-300 hover:bg-green-200 mx-10" @click="handleAnimeRecClick">
       Fetch Anime Recommendation Data
+    </button>
+    <button class="bg-green-300 hover:bg-green-200 mx-10" @click="handleRandomAnimeClick">
+      Fetch Random Anime Data
     </button>
   </div>
 </template>
